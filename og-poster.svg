@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Semen · OG-poster (v3).
+  Editorial poster 1200×630. Семён полностью в левой трети.
+  Заголовок СЕМЁН во второй+третьей трети, обрезан правым краем на ~25% буквы.
+  Никаких лиц.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="СЕМЁН — концепт-постер графического романа">
+  <defs>
+    <pattern id="halftone" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="1.1" fill="#F4ECD8" opacity="0.20"/>
+    </pattern>
+    <pattern id="halftone-light" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#F4ECD8" opacity="0.10"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+      <feColorMatrix values="0 0 0 0 0.96  0 0 0 0 0.93  0 0 0 0 0.85  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <!-- заголовок: область от x=460 до x=1200 (740px), текст выйдет за правый край на 90px -->
+    <clipPath id="titleClip">
+      <rect x="460" y="100" width="740" height="340"/>
+    </clipPath>
+    <clipPath id="brickClip">
+      <polygon points="0,520 1200,490 1200,630 0,630"/>
+    </clipPath>
+    <!-- Семён полностью внутри левой трети: 40..400 -->
+    <clipPath id="semenClip">
+      <rect x="40" y="60" width="360" height="490"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. фон: свинец -->
+  <rect width="1200" height="630" fill="#0C0D0F"/>
+  <!-- ореол «от фонаря» вокруг Семёна -->
+  <ellipse cx="240" cy="380" rx="280" ry="360" fill="#1A1611"/>
+
+  <!-- 2. Семён полностью в левой трети -->
+  <g clip-path="url(#semenClip)" transform="translate(60,70) scale(1.05)">
+    <!-- плечи/наплечники с дисками -->
+    <rect x="0" y="180" width="60" height="32" fill="#2A2520"/>
+    <circle cx="14" cy="196" r="9" fill="#6E2A18" stroke="#F4ECD8" stroke-width="1.5"/>
+    <rect x="220" y="180" width="60" height="32" fill="#2A2520"/>
+    <circle cx="266" cy="196" r="9" fill="#6E2A18" stroke="#F4ECD8" stroke-width="1.5"/>
+    <!-- грудная пластина (корпус) -->
+    <path d="M 50 200 L 50 360 L 230 360 L 230 200 Q 230 145 140 145 Q 50 145 50 200 Z" fill="#1F1A14"/>
+    <!-- поясничный блок -->
+    <rect x="80" y="340" width="120" height="48" fill="#0C0D0F" stroke="#3A352E" stroke-width="1.5"/>
+    <!-- кабели от поясницы к ногам -->
+    <path d="M 110 388 Q 110 410 130 440" stroke="#F4ECD8" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 170 388 Q 170 410 150 440" stroke="#F4ECD8" stroke-width="2" fill="none" opacity="0.7"/>
+    <!-- ноги -->
+    <rect x="90" y="388" width="36" height="92" fill="#1F1A14"/>
+    <rect x="154" y="388" width="36" height="92" fill="#1F1A14"/>
+    <!-- диски на коленях -->
+    <circle cx="108" cy="420" r="8" fill="#6E2A18" stroke="#F4ECD8" stroke-width="1.5"/>
+    <circle cx="172" cy="420" r="8" fill="#6E2A18" stroke="#F4ECD8" stroke-width="1.5"/>
+    <!-- наручи -->
+    <rect x="-30" y="210" width="56" height="32" fill="#1F1A14"/>
+    <rect x="254" y="210" width="56" height="32" fill="#1F1A14"/>
+    <!-- шейная пластина -->
+    <rect x="118" y="135" width="44" height="18" fill="#0C0D0F"/>
+    <!-- шлем -->
+    <path d="M 80 135 Q 80 25 140 25 Q 200 25 200 135 Z" fill="#1F1A14"/>
+    <!-- техническая деталь на боковине шлема (НЕ винт, чтобы не читалось как лицо) -->
+    <polygon points="195,50 205,55 195,60" fill="#3A352E"/>
+    <rect x="192" y="62" width="8" height="14" fill="#3A352E"/>
+    <!-- линзы спереди -->
+    <ellipse cx="110" cy="80" rx="17" ry="13" fill="#0C0D0F" stroke="#F4ECD8" stroke-width="2.5"/>
+    <ellipse cx="110" cy="80" rx="10" ry="8" fill="#E08A2B" opacity="0.85"/>
+    <ellipse cx="170" cy="80" rx="17" ry="13" fill="#0C0D0F" stroke="#F4ECD8" stroke-width="2.5"/>
+    <ellipse cx="170" cy="80" rx="10" ry="8" fill="#E08A2B" opacity="0.85"/>
+    <!-- переносица -->
+    <rect x="127" y="77" width="26" height="6" fill="#1F1A14"/>
+    <!-- нижняя маска с дыхательными решётками -->
+    <rect x="93" y="106" width="94" height="30" fill="#0C0D0F"/>
+    <line x1="100" y1="116" x2="180" y2="116" stroke="#F4ECD8" stroke-width="1.5"/>
+    <line x1="100" y1="124" x2="180" y2="124" stroke="#F4ECD8" stroke-width="1.5"/>
+    <!-- вертикальная деталь кителя -->
+    <line x1="140" y1="155" x2="140" y2="335" stroke="#3A352E" stroke-width="1.5"/>
+    <circle cx="140" cy="220" r="4" fill="#6E2A18"/>
+    <circle cx="140" cy="260" r="4" fill="#6E2A18"/>
+  </g>
+
+  <!-- 3. halftone: плотнее слева у Семёна, легче по правой стороне -->
+  <rect x="0" y="0" width="440" height="500" fill="url(#halftone)"/>
+  <rect x="440" y="0" width="760" height="500" fill="url(#halftone-light)"/>
+
+  <!-- 4. заголовок СЕМЁН — крупно, начнётся за x=460, последняя буква уйдёт за правый край канвы на ~110px (≈25%) -->
+  <g clip-path="url(#titleClip)">
+    <text x="460" y="380" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="340" letter-spacing="-14" fill="#F4ECD8">СЕМЁН</text>
+  </g>
+  <!-- намеренный «срез» правого края канвы -->
+  <rect x="1110" y="100" width="90" height="340" fill="#0C0D0F"/>
+
+  <!-- 5. подпись под заголовком -->
+  <g font-family="'Courier New', monospace" fill="#9A968C" font-size="14" letter-spacing="3">
+    <text x="460" y="430">[ КОНЦЕПТ-ПОСТЕР · НЕ ФИНАЛЬНАЯ ОБЛОЖКА ]</text>
+    <text x="460" y="455">1996 · ПРОМЫШЛЕННЫЙ РАЙЦЕНТР</text>
+  </g>
+
+  <!-- 6. кирпичная полоса снизу со сколом -->
+  <g clip-path="url(#brickClip)">
+    <rect x="0" y="490" width="1200" height="140" fill="#6E2A18"/>
+    <polygon points="180,490 220,470 260,490" fill="#0C0D0F"/>
+    <polygon points="540,490 560,478 590,490" fill="#0C0D0F"/>
+    <polygon points="880,490 920,464 950,490" fill="#0C0D0F"/>
+    <polygon points="1080,490 1110,476 1130,490" fill="#0C0D0F"/>
+    <line x1="0" y1="540" x2="1200" y2="530" stroke="#0C0D0F" stroke-width="1.5" opacity="0.55"/>
+    <line x1="0" y1="580" x2="1200" y2="568" stroke="#0C0D0F" stroke-width="1.5" opacity="0.55"/>
+  </g>
+
+  <!-- 7. подписи в кирпичной полосе -->
+  <g font-family="'Courier New', monospace" fill="#F4ECD8" font-size="12" letter-spacing="3">
+    <text x="60" y="605">ПИТЧ-ДЕК · 10 СЛАЙДОВ · АВГУСТ 2026</text>
+    <text x="900" y="605">PITCH · NOT FOR PUBLIC RELEASE</text>
+  </g>
+
+  <!-- 8. зерно плёнки -->
+  <rect width="1200" height="630" filter="url(#grain)" opacity="0.6"/>
+</svg>
